@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barry King Badic Redondo | E-commerce Virtual Assistant</title>
+<meta name="description" content="E-commerce virtual assistant in Cagayan de Oro, Philippines. I handle product listings, orders, inventory and customer emails so you can focus on growing your store.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Barry King Badic Redondo | E-commerce Virtual Assistant">
+<meta property="og:description" content="I handle product listings, orders, inventory and customer emails for online stores. Full time, ready to start in one week.">
+<meta property="og:image" content="profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%234001EF'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EBR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#4001EF;--accent-dark:#3000b8;--accent-tint:#EFEAFF;
+  --bg:#FDFBF8;--surface:#FFFFFF;--sand:#F5F1EA;--ink:#241F2E;--muted:#5B5566;--line:#E7E1D8;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--s8:64px;--s12:96px;
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --shadow:0 1px 2px rgba(36,31,46,.05),0 8px 24px rgba(36,31,46,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;letter-spacing:-.01em;font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--s3)}
+section{padding:var(--s8) 0}
+.sand{background:var(--sand)}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:var(--s2)}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:var(--s5)}
+p{max-width:68ch}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(253,251,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none}
+.menu{display:none;list-style:none;gap:var(--s3)}
+.menu a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;padding:var(--s1) 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--accent)}
+.menu-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:8px 16px;font:500 15px var(--sans);color:var(--ink);cursor:pointer}
+.menu.open{display:flex;flex-direction:column;gap:0;position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:var(--s1) var(--s3) var(--s2)}
+.menu.open a{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+
+/* buttons */
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--accent);transition:background .2s,color .2s}
+.btn-main{background:var(--accent);color:#fff}
+.btn-main:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-alt{background:transparent;color:var(--accent)}
+.btn-alt:hover{background:var(--accent-tint)}
+.quiet{display:inline-block;color:var(--muted);font-size:15px;text-decoration:underline;text-underline-offset:4px;padding:12px 0}
+.quiet:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:var(--s6) 0 var(--s8)}
+.hero .wrap{display:grid;gap:var(--s5)}
+.hero h1{font-size:clamp(38px,8vw,68px);margin-bottom:var(--s3);max-width:14ch}
+.hero .role{font-weight:600;margin-bottom:var(--s2)}
+.hero .promise{font-size:19px;color:var(--muted);margin-bottom:var(--s4)}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
+.photo{width:min(100%,360px);aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--accent-tint);box-shadow:var(--shadow);justify-self:start}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.initials{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;font:700 clamp(64px,18vw,110px) var(--serif)}
+
+/* cards */
+.grid{display:grid;gap:var(--s3)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s4);box-shadow:var(--shadow)}
+.card h3{font-size:22px;margin-bottom:var(--s1)}
+.card p{color:var(--muted);font-size:16px}
+
+/* work */
+.case{overflow:hidden;padding:0;display:grid}
+.case-img{background:var(--accent-tint);overflow:hidden;border-bottom:1px solid var(--line)}
+.case-img img{width:100%;height:auto}
+.fallback{width:100%;min-height:240px;height:100%;display:flex;align-items:center;justify-content:center;padding:var(--s3);text-align:center;font:600 24px var(--serif);color:var(--accent);background:var(--accent-tint)}
+.case-body{padding:var(--s4)}
+.case h3{font-size:26px;margin-bottom:var(--s3)}
+.case dt{font-weight:600;font-size:16px;margin-top:var(--s2)}
+.case dd{color:var(--muted);font-size:16px}
+
+/* tools */
+.tools{display:grid;gap:var(--s3)}
+.tools h3{font-size:19px;margin-bottom:var(--s1)}
+.tools p{color:var(--muted);font-size:16px}
+
+/* timeline */
+.timeline{list-style:none;border-left:2px solid var(--accent);margin-left:6px}
+.timeline li{padding:0 0 var(--s4) var(--s4);position:relative}
+.timeline li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.timeline h3{font-size:22px}
+.timeline .when{color:var(--accent);font-weight:600;font-size:15px;margin:4px 0 8px}
+.timeline p{color:var(--muted);font-size:16px}
+.cert{margin-top:var(--s2)}
+.cert h3{font-size:22px;margin-bottom:var(--s1)}
+
+/* how */
+.how{display:grid;gap:var(--s3)}
+.how h3{font-size:20px;margin-bottom:var(--s1)}
+
+/* contact */
+.contact{background:var(--accent);color:#fff;border-radius:20px;padding:var(--s6) var(--s3);text-align:center}
+.contact h2{color:#fff}
+.contact p{margin:0 auto var(--s4);color:#E9E2FF}
+.contact .big{display:inline-block;font:600 clamp(20px,5vw,32px) var(--serif);color:#fff;word-break:break-all;margin-bottom:var(--s4)}
+.links{display:flex;flex-wrap:wrap;gap:var(--s2);justify-content:center}
+.links a{color:#fff;border:2px solid rgba(255,255,255,.7);padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:600}
+.links a:hover{background:#fff;color:var(--accent)}
+.contact :focus-visible{outline-color:#fff}
+footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+@media(min-width:700px){
+  .grid.two{grid-template-columns:repeat(2,1fr)}
+  .tools,.how{grid-template-columns:repeat(2,1fr)}
+  .case{grid-template-columns:1fr 1fr}
+  .case-img{border-bottom:0;border-right:1px solid var(--line)}
+  .case:nth-child(even) .case-img{border-right:0;border-left:1px solid var(--line)}
+  .case:nth-child(even) .case-img{order:2}
+}
+@media(min-width:900px){
+  section{padding:var(--s12) 0}
+  .menu{display:flex}
+  .menu-btn{display:none}
+  .hero{padding:var(--s8) 0 var(--s12)}
+  .hero .wrap{grid-template-columns:1.3fr 1fr;align-items:center;gap:var(--s8)}
+  .photo{justify-self:end}
+  .grid.three{grid-template-columns:repeat(3,1fr)}
+  .tools{grid-template-columns:repeat(3,1fr)}
+  .contact{padding:var(--s8)}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Barry Redondo</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#how">How I work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>I run the daily work of your online store.</h1>
+      <p class="role">Barry King Badic Redondo, E-commerce Virtual Assistant</p>
+      <p class="promise">I give you reliable, organized support. I handle product listings, SEO, orders, inventory and customer emails. You save time and your customers get a better shopping experience.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="mailto:redondobarryking@gmail.com">Email me</a>
+        <a class="btn btn-alt" href="#work">See my work</a>
+        <a class="quiet" href="https://www.loom.com/share/470a6354a2c449308d60a23845ccbca0" target="_blank" rel="noopener">Watch my 60-second intro</a>
+      </div>
+    </div>
+    <div class="photo" id="photo">
+      <img src="profile.jpg" alt="Portrait of Barry King Badic Redondo" width="360" height="360">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="sand">
+  <div class="wrap reveal">
+    <h2>What I can take off your plate</h2>
+    <p class="lead">Hand me the daily store tasks. Here is what you get back.</p>
+    <div class="grid two three">
+      <article class="card"><h3>Product listings</h3><p>Clear titles, descriptions and photos that sell.</p></article>
+      <article class="card"><h3>Order processing</h3><p>Orders checked, fulfilled and tracked every day.</p></article>
+      <article class="card"><h3>Customer emails</h3><p>Order questions answered fast.</p></article>
+      <article class="card"><h3>Inventory tracking</h3><p>No surprise stock-outs.</p></article>
+      <article class="card"><h3>Supplier follow-ups</h3><p>Orders and shipments chased on time.</p></article>
+      <article class="card"><h3>Store updates</h3><p>Banners, discounts and collections ready for every promo.</p></article>
+      <article class="card"><h3>Marketplace management</h3><p>Amazon, Shopee and Lazada listings kept in order.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap reveal">
+    <h2>Selected work</h2>
+    <p class="lead">Three real tasks, shown from problem to result.</p>
+    <div class="grid">
+      <article class="card case">
+        <div class="case-img"><img src="work-1.jpg" alt="Completed Aquaflask product listing in Shopify" data-title="Product Listing" loading="lazy"></div>
+        <div class="case-body">
+          <h3>Product Listing</h3>
+          <dl>
+            <dt>The problem</dt><dd>The Shopify product listing was blank. It had no title, description, images, price or metafields.</dd>
+            <dt>What I did</dt><dd>I added the product as "Aquaflask". I wrote the description, uploaded the images, set the price and stock, and filled in the metafields and variants.</dd>
+            <dt>The result</dt><dd>A complete, organized listing with full information for buyers.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card case">
+        <div class="case-img"><img src="work-2.jpg" alt="Shopify SEO settings for the Aqua Flask 32oz Cobalt Blue listing" data-title="Product Optimization" loading="lazy"></div>
+        <div class="case-body">
+          <h3>Product Optimization</h3>
+          <dl>
+            <dt>The problem</dt><dd>Search engines and shoppers could not find the store or its product images. The meta descriptions, page titles and image alt text were missing.</dd>
+            <dt>What I did</dt><dd>I set up the store's SEO and social sharing. I wrote a keyword-rich meta title and description for the Aqua Flask 32oz Cobalt Blue bottle. I added descriptive alt text to the product images.</dd>
+            <dt>The result</dt><dd>An optimized listing that is easier to find in search and more accessible to screen reader users.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card case">
+        <div class="case-img"><img src="work-3.jpg" alt="Customer service email replies drafted in Gmail" data-title="Customer Service" loading="lazy"></div>
+        <div class="case-body">
+          <h3>Customer Service</h3>
+          <dl>
+            <dt>The problem</dt><dd>Customers wrote in about delivery delays, damaged items and changes to orders. Each one needed a quick, professional reply.</dd>
+            <dt>What I did</dt><dd>I wrote polite, caring replies in Gmail. I started a shipping trace and a priority replacement for a late order. I asked for a photo of a leaked item to process a refund. I confirmed an order change made before the cutoff.</dd>
+            <dt>The result</dt><dd>Clear, reassuring replies that resolve tickets quickly and keep customers' trust in the brand.</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="sand">
+  <div class="wrap reveal">
+    <h2>Tools I use</h2>
+    <p class="lead">I already know the tools most online stores run on.</p>
+    <div class="tools">
+      <div><h3>Store and payments</h3><p>Shopify, PayPal</p></div>
+      <div><h3>Customer support and CRM</h3><p>Zendesk, HubSpot, GoHighLevel, Apollo</p></div>
+      <div><h3>Email and meetings</h3><p>Gmail, Outlook, Google Calendar, Zoom, Google Meet, Microsoft Teams, WhatsApp, Loom</p></div>
+      <div><h3>Projects and documents</h3><p>Asana, Notion, Monday.com, Dropbox, DocuSign</p></div>
+      <div><h3>Spreadsheets and office</h3><p>Excel, Google Sheets, Microsoft 365</p></div>
+      <div><h3>Design, video and social</h3><p>Canva, Photoshop, CapCut, Premiere Pro, Meta Business Suite</p></div>
+      <div><h3>AI assistants</h3><p>ChatGPT, Gemini, Claude</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap reveal">
+    <h2>Experience</h2>
+    <p class="lead">I answered customer emails and live chat, and logged every case in a CRM and ticketing system. I write clear replies, keep clean records and solve problems on the spot. I am used to quality checks and daily targets, so I work fast without cutting corners.</p>
+    <ol class="timeline">
+      <li><h3>Operation Customer Expert</h3><p class="when">2026</p><p>I align internal logistics, supply chains and standard operating procedures to keep service delivery smooth.</p></li>
+      <li><h3>Mathematics Teacher</h3><p class="when">2023 to 2025</p><p>I planned lessons, assessed students and taught problem-solving skills.</p></li>
+      <li><h3>Visual Design in Photoshop</h3><p class="when">2015 to 2025</p><p>I format with font scale, headings and short paragraphs to guide the reader. I edit by trimming flaws and fluff. I also wrote UX microcopy for app buttons and interfaces, plus tutorials, agency blogs and creative guides.</p></li>
+    </ol>
+    <div class="card cert">
+      <h3>Training</h3>
+      <p>Introduction to E-Commerce Management</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="sand">
+  <div class="wrap reveal">
+    <h2>How I work</h2>
+    <div class="how">
+      <div class="card"><h3>Hours</h3><p>Full time, 40 hours per week.</p></div>
+      <div class="card"><h3>Availability</h3><p>I can start in 1 week.</p></div>
+      <div class="card"><h3>Location</h3><p>Cagayan de Oro City, Philippines.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap reveal">
+    <div class="contact">
+      <h2>Let's talk about your store</h2>
+      <p>Tell me what is taking up your time. I will tell you how I can take it on.</p>
+      <a class="big" href="mailto:redondobarryking@gmail.com">redondobarryking@gmail.com</a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/barrykingredondo" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/2041214" target="_blank" rel="noopener">OnlineJobs.ph profile</a>
+        <a href="https://www.loom.com/share/470a6354a2c449308d60a23845ccbca0" target="_blank" rel="noopener">Watch my intro</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Barry King Badic Redondo</div></footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  });
+
+  /* image fallbacks */
+  function fallbackProfile(){
+    var p=document.getElementById('photo');
+    p.innerHTML='<div class="initials" role="img" aria-label="Barry King Badic Redondo">BR</div>';
+  }
+  var pi=document.querySelector('#photo img');
+  if(pi){
+    pi.addEventListener('error',fallbackProfile);
+    if(pi.complete&&pi.naturalWidth===0)fallbackProfile();
+  }
+  document.querySelectorAll('.case-img img').forEach(function(img){
+    function swap(){
+      var d=document.createElement('div');
+      d.className='fallback';
+      d.textContent=img.getAttribute('data-title');
+      img.parentNode.replaceChild(d,img);
+    }
+    img.addEventListener('error',swap);
+    if(img.complete&&img.naturalWidth===0)swap();
+  });
+
+  /* fade in on scroll */
+  var els=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('in');});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
