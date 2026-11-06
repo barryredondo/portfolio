@@ -88,15 +88,19 @@ p{max-width:68ch}
 .tools h3{font-size:19px;margin-bottom:var(--s1)}
 .tools p{color:var(--muted);font-size:16px}
 
-/* timeline */
+/* timeline & certs */
 .timeline{list-style:none;border-left:2px solid var(--accent);margin-left:6px}
 .timeline li{padding:0 0 var(--s4) var(--s4);position:relative}
 .timeline li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
 .timeline h3{font-size:22px}
 .timeline .when{color:var(--accent);font-weight:600;font-size:15px;margin:4px 0 8px}
 .timeline p{color:var(--muted);font-size:16px}
-.cert{margin-top:var(--s2)}
-.cert h3{font-size:22px;margin-bottom:var(--s1)}
+.cert{margin-top:var(--s4)}
+.cert h3{font-size:24px;margin-bottom:var(--s3)}
+.cert-grid{display:grid;gap:var(--s3);grid-template-columns:1fr}
+.cert-item{background:var(--bg);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.cert-item img{width:100%;height:auto;object-fit:cover;border-bottom:1px solid var(--line)}
+.cert-item p{padding:var(--s2);font-weight:600;font-size:15px;color:var(--ink)}
 
 /* how */
 .how{display:grid;gap:var(--s3)}
@@ -128,6 +132,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
   .case-img{border-bottom:0;border-right:1px solid var(--line)}
   .case:nth-child(even) .case-img{border-right:0;border-left:1px solid var(--line)}
   .case:nth-child(even) .case-img{order:2}
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(min-width:900px){
   section{padding:var(--s12) 0}
@@ -263,10 +268,24 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     </ol>
     <div class="card cert">
       <h3>Training</h3>
-      <p>Introduction to E-Commerce Management</p>
-      <p>Virtual Assisstant Masterclass Training</p>
-      <p>Mastering Data Analysis Using Microsoft Excel</p>
-      <p>Quickbooks Online Advance Training</p>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <img src="cert-1.jpg" alt="Certificate for Introduction to E-Commerce Management" data-title="Introduction to E-Commerce Management" loading="lazy">
+          <p>Introduction to E-Commerce Management</p>
+        </div>
+        <div class="cert-item">
+          <img src="cert-2.jpg" alt="Certificate for Virtual Assistant Masterclass Training" data-title="Virtual Assistant Masterclass Training" loading="lazy">
+          <p>Virtual Assistant Masterclass Training</p>
+        </div>
+        <div class="cert-item">
+          <img src="cert-3.jpg" alt="Certificate for Mastering Data Analysis Using Microsoft Excel" data-title="Mastering Data Analysis Using Microsoft Excel" loading="lazy">
+          <p>Mastering Data Analysis Using Microsoft Excel</p>
+        </div>
+        <div class="cert-item">
+          <img src="cert-4.jpg" alt="Certificate for Quickbooks Online Advance Training" data-title="Quickbooks Online Advance Training" loading="lazy">
+          <p>Quickbooks Online Advance Training</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -323,7 +342,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     pi.addEventListener('error',fallbackProfile);
     if(pi.complete&&pi.naturalWidth===0)fallbackProfile();
   }
-  document.querySelectorAll('.case-img img').forEach(function(img){
+  document.querySelectorAll('.case-img img, .cert-item img').forEach(function(img){
     function swap(){
       var d=document.createElement('div');
       d.className='fallback';
