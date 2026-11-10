@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Barry King Badic Redondo | E-commerce Virtual Assistant</title>
-<meta name="description" content="E-commerce virtual assistant in Cagayan de Oro, Philippines. I handle product listings, orders, inventory and customer emails so you can focus on growing your store.">
+<title>Barry King Badic Redondo | E-commerce Virtual Assistant & Bookkeeper</title>
+<meta name="description" content="E-commerce virtual assistant and bookkeeper in Cagayan de Oro, Philippines. I handle product listings, orders, financial records, and QuickBooks reconciliation so you can focus on growing your store.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Barry King Badic Redondo | E-commerce Virtual Assistant">
-<meta property="og:description" content="I handle product listings, orders, inventory and customer emails for online stores. Full time, ready to start in one week.">
+<meta property="og:title" content="Barry King Badic Redondo | E-commerce Virtual Assistant & Bookkeeper">
+<meta property="og:description" content="I handle product listings, orders, inventory, QuickBooks bookkeeping, and reconciliation for online stores. Full time, ready to start in one week.">
 <meta property="og:image" content="profile.jpg">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%234001EF'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EBR%3C/text%3E%3C/svg%3E">
@@ -18,6 +18,7 @@
 :root{
   --accent:#6366f1;--accent-dark:#4f46e5;--accent-tint:#1e1b4b;
   --bg:#0f172a;--surface:#1e293b;--sand:#182234;--ink:#f8fafc;--muted:#94a3b8;--line:#334155;
+  --green-accent:#10b981;
   --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--s8:64px;--s12:96px;
   --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
   --shadow:0 10px 15px -3px rgba(0,0,0,.3);
@@ -72,6 +73,24 @@ p{max-width:68ch}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s4);box-shadow:var(--shadow)}
 .card h3{font-size:22px;margin-bottom:var(--s1)}
 .card p{color:var(--muted);font-size:16px}
+
+/* bookkeeping section specifics */
+.card-bookkeeping {
+  border-top: 4px solid var(--green-accent);
+}
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.card-bookkeeping ul {
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.card-bookkeeping li {
+  margin-bottom: 8px;
+}
 
 /* work */
 .case{overflow:hidden;padding:0;display:grid}
@@ -155,6 +174,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
     <ul class="menu" id="menu">
       <li><a href="#services">Services</a></li>
+      <li><a href="#bookkeeping">Bookkeeping</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -168,9 +188,9 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1>I run the daily work of your online store.</h1>
-      <p class="role">Barry King Badic Redondo, E-commerce Virtual Assistant</p>
-      <p class="promise">I give you reliable, organized support. I handle product listings, SEO, orders, inventory and customer emails. You save time and your customers get a better shopping experience.</p>
+      <h1>I run the daily operations & finances of your store.</h1>
+      <p class="role">Barry King Badic Redondo, E-commerce Virtual Assistant & Bookkeeper</p>
+      <p class="promise">I give you reliable, organized support. I handle product listings, SEO, orders, inventory, customer emails, and QuickBooks bookkeeping. You save time and your business stays profitable.</p>
       <div class="cta">
         <a class="btn btn-main" href="mailto:redondobarryking@gmail.com">Email me</a>
         <a class="btn btn-alt" href="#work">See my work</a>
@@ -195,6 +215,45 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
       <article class="card"><h3>Supplier follow-ups</h3><p>Orders and shipments chased on time.</p></article>
       <article class="card"><h3>Store updates</h3><p>Banners, discounts and collections ready for every promo.</p></article>
       <article class="card"><h3>Marketplace management</h3><p>Shopify and Amazon listings kept in order.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKKEEPING SECTION -->
+<section id="bookkeeping">
+  <div class="wrap reveal">
+    <h2>Bookkeeping & Financial Support</h2>
+    <p class="lead">Accurate financial records to keep your business tax-ready and profitable.</p>
+    <div class="grid two three">
+      <article class="card card-bookkeeping">
+        <div class="card-icon">📊</div>
+        <h3>Bookkeeping & Reconciliation</h3>
+        <ul>
+          <li>Monthly Bank & Credit Card Reconciliation</li>
+          <li>Income & Expense Categorization</li>
+          <li>Chart of Accounts Management</li>
+        </ul>
+      </article>
+
+      <article class="card card-bookkeeping">
+        <div class="card-icon">🛍️</div>
+        <h3>E-Commerce Financial Tracking</h3>
+        <ul>
+          <li>Shopify, PayPal & Stripe Payout Matching</li>
+          <li>Cost of Goods Sold (COGS) Tracking</li>
+          <li>Inventory & Sales Fee Reconciliation</li>
+        </ul>
+      </article>
+
+      <article class="card card-bookkeeping">
+        <div class="card-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <ul>
+          <li>Monthly Profit & Loss (P&L) Statements</li>
+          <li>Balance Sheet Updates</li>
+          <li>Accounts Payable & Receivable Tracking</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
@@ -247,10 +306,10 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     <p class="lead">I already know the tools most online stores run on.</p>
     <div class="tools">
       <div><h3>Store and payments</h3><p>Shopify, Amazon, Dropshipping, PayPal, Payoneer</p></div>
+      <div><h3>Bookkeeping and finance</h3><p>QuickBooks Online, Xero, Excel, Google Sheets</p></div>
       <div><h3>Customer support and CRM</h3><p>Zendesk, HubSpot, GoHighLevel, Apollo</p></div>
       <div><h3>Email and meetings</h3><p>Gmail, Outlook, Google Calendar, Zoom, Google Meet, Microsoft Teams, WhatsApp, Loom</p></div>
       <div><h3>Projects and documents</h3><p>Asana, Notion, Monday.com, Dropbox, DocuSign</p></div>
-      <div><h3>Spreadsheets and office</h3><p>Excel, Google Sheets, Microsoft 365</p></div>
       <div><h3>Design, video and social</h3><p>Canva, Photoshop, CapCut, Premiere Pro, Meta Business Suite</p></div>
       <div><h3>AI assistants</h3><p>ChatGPT, Gemini, Claude</p></div>
     </div>
@@ -342,7 +401,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     pi.addEventListener('error',fallbackProfile);
     if(pi.complete&&pi.naturalWidth===0)fallbackProfile();
   }
-  document.querySelectorAll('.case-img img, .cert-item img').forEach(function(img){
+  document.querySelectorAll('.querySelectorAll('.case-img img, .cert-item img').forEach(function(img){
     function swap(){
       var d=document.createElement('div');
       d.className='fallback';
