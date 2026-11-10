@@ -70,9 +70,15 @@ p{max-width:68ch}
 
 /* cards */
 .grid{display:grid;gap:var(--s3)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s4);box-shadow:var(--shadow)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:var(--s4);box-shadow:var(--shadow);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 20px -4px rgba(99,102,241,.2)}
 .card h3{font-size:22px;margin-bottom:var(--s1)}
 .card p{color:var(--muted);font-size:16px}
+
+/* service 3D icons & featured card */
+.service-icon{width:72px;height:72px;object-fit:contain;margin-bottom:var(--s2);border-radius:12px}
+.card-featured{grid-column:span 1;display:flex;flex-direction:column;justify-content:space-between}
+.dashboard-img{width:100%;height:auto;margin-top:var(--s3);border-radius:10px;border:1px solid var(--line);object-fit:cover}
 
 /* bookkeeping section specifics */
 .card-bookkeeping {
@@ -161,6 +167,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
   .hero .wrap{grid-template-columns:1.3fr 1fr;align-items:center;gap:var(--s8)}
   .photo{justify-self:end}
   .grid.three{grid-template-columns:repeat(3,1fr)}
+  .card-featured{grid-column:span 2}
   .tools{grid-template-columns:repeat(3,1fr)}
   .contact{padding:var(--s8)}
 }
@@ -208,13 +215,43 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     <h2>What I can take off your plate</h2>
     <p class="lead">Hand me the daily store tasks. Here is what you get back.</p>
     <div class="grid two three">
-      <article class="card"><h3>Product listings</h3><p>Clear titles, descriptions and photos that sell.</p></article>
-      <article class="card"><h3>Order processing</h3><p>Orders checked, fulfilled and tracked every day.</p></article>
-      <article class="card"><h3>Customer emails</h3><p>Order questions answered fast.</p></article>
-      <article class="card"><h3>Inventory tracking</h3><p>No surprise stock-outs.</p></article>
-      <article class="card"><h3>Supplier follow-ups</h3><p>Orders and shipments chased on time.</p></article>
-      <article class="card"><h3>Store updates</h3><p>Banners, discounts and collections ready for every promo.</p></article>
-      <article class="card"><h3>Marketplace management</h3><p>Shopify and Amazon listings kept in order.</p></article>
+      <article class="card">
+        <img src="product-listings.jpg" alt="Product Listings Icon" class="service-icon" loading="lazy">
+        <h3>Product listings</h3>
+        <p>Clear titles, descriptions and photos that sell.</p>
+      </article>
+      <article class="card">
+        <img src="order-processing.jpg" alt="Order Processing Icon" class="service-icon" loading="lazy">
+        <h3>Order processing</h3>
+        <p>Orders checked, fulfilled and tracked every day.</p>
+      </article>
+      <article class="card">
+        <img src="customer-emails.jpg" alt="Customer Emails Icon" class="service-icon" loading="lazy">
+        <h3>Customer emails</h3>
+        <p>Order questions answered fast.</p>
+      </article>
+      <article class="card">
+        <img src="inventory-tracking.jpg" alt="Inventory Tracking Icon" class="service-icon" loading="lazy">
+        <h3>Inventory tracking</h3>
+        <p>No surprise stock-outs.</p>
+      </article>
+      <article class="card">
+        <img src="supplier-followups.jpg" alt="Supplier Follow-ups Icon" class="service-icon" loading="lazy">
+        <h3>Supplier follow-ups</h3>
+        <p>Orders and shipments chased on time.</p>
+      </article>
+      <article class="card">
+        <img src="store-updates.jpg" alt="Store Updates Icon" class="service-icon" loading="lazy">
+        <h3>Store updates</h3>
+        <p>Banners, discounts and collections ready for every promo.</p>
+      </article>
+      <article class="card card-featured">
+        <div>
+          <h3>Marketplace management</h3>
+          <p>Shopify and Amazon listings kept in order.</p>
+        </div>
+        <img src="marketplace-dashboard.jpg" alt="Marketplace Management Dashboard Sync" class="dashboard-img" loading="lazy">
+      </article>
     </div>
   </div>
 </section>
@@ -401,7 +438,7 @@ footer{padding:var(--s5) 0;text-align:center;color:var(--muted);font-size:15px}
     pi.addEventListener('error',fallbackProfile);
     if(pi.complete&&pi.naturalWidth===0)fallbackProfile();
   }
-  document.querySelectorAll('.querySelectorAll('.case-img img, .cert-item img').forEach(function(img){
+  document.querySelectorAll('.case-img img, .cert-item img').forEach(function(img){
     function swap(){
       var d=document.createElement('div');
       d.className='fallback';
